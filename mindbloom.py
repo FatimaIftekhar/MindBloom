@@ -15,7 +15,7 @@ from langchain_core.messages import HumanMessage
 from typing import TypedDict
 
 # Set the environment variable first (in Colab or your local shell)
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCDf29NqnK4xxExitLLMqV7SI9Zb9rSm1s"
+os.environ["GOOGLE_API_KEY"] = "api_key"
 
 # Then retrieve it correctly
 api_key = os.environ.get("GOOGLE_API_KEY")
@@ -257,5 +257,6 @@ def run_chat_loop(app):
 
         state = {"user_input": user_input}
         response = app.invoke(state)
+
 
 run_chat_loop(app)
